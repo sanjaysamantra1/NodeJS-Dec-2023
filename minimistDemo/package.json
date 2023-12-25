@@ -1,0 +1,14 @@
+{
+  "name": "minimistdemo",
+  "version": "1.0.0",
+  "description": "minimist demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sanjay",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
