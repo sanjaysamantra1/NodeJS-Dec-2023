@@ -1,0 +1,13 @@
+class Employee {
+  id = 101;
+  name = "Asutosh";
+  sal = 5000;
+
+  displayInfo1() {
+    console.log(this.id, this.name, this.sal);
+    console.log(this, globalThis);
+    // this = Employee
+  }
+}
+let emp1 = new Employee();
+emp1.displayInfo1();
