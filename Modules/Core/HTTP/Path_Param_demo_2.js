@@ -3,7 +3,7 @@ const users = require("./users.json");
 
 const server = http.createServer((req, res) => {
   if (req.url !== "/favicon.ico") {
-    console.log(req.url);
+    console.log(req.url.split("/"));
     const userId = +req.url.split("/").pop();
     const userObj = users.find((user) => user.id === userId);
     if (userObj) {
