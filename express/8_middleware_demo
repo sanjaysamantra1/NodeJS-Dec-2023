@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+function errorHandler(err, req, res, next) {
+  
+}
+
 app.use((req, res, next) => {
   console.log(`${req.url} - triggered at ${new Date().toLocaleTimeString()}`);
   next();
