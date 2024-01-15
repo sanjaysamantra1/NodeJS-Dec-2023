@@ -1,0 +1,8 @@
+<script>
+    async function fetchData() {
+        let res = await fetch('http://localhost:5000/users')
+        let finalRes = await res.text();
+        console.log(finalRes)
+    }
+    fetchData();
+</script>
