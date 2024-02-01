@@ -1,0 +1,9 @@
+<script>
+    async function consumegraphQLAPI(){
+        const myURL = 'http://localhost:4000/graphql?query={hello}';
+        let response = await fetch(myURL)
+        let data = await response.json();
+        console.log(data)
+    }
+    consumegraphQLAPI();
+</script>
