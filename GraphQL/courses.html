@@ -1,0 +1,19 @@
+<script>
+    async function getData() {
+        const url = 'http://localhost:5000/courses';
+        const myQuery = `{courses(topic:"Node.js"){id,title,topic}}`;
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query: myQuery
+            })
+        };
+        let resp = await fetch(url,options);
+        let data = await resp.json();
+        console.log(data)
+    }
+    getData();
+</script>
