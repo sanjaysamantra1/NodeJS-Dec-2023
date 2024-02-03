@@ -17,7 +17,7 @@ app.get('/fetchData', async (req, res) => {
     if (dataInRedis) {
         console.log(('Data found in Redis'))
         let output = JSON.parse(dataInRedis)
-        res.send({ sorce: 'REDIS', output });
+        res.send({ source: 'REDIS', output });
     } else {
         console.log('Data not found in Redis');
         let response = await axios.get(url);
@@ -27,7 +27,7 @@ app.get('/fetchData', async (req, res) => {
         await redisClient.set(countryName, JSON.stringify(output));
         console.log('data stored in REDIS')
 
-        res.send({ sorce: 'API', output });
+        res.send({ source: 'API', output });
     }
 })
 
